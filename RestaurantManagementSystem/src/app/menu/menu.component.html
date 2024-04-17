@@ -1,0 +1,27 @@
+<app-adminnav></app-adminnav>
+<app-adminside></app-adminside>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+<div class="container">
+    <h2 class="text-center">Menu List</h2>
+    <button (click)="add()" class="btn btn-dark" id="add">Add Menu</button>
+    <br><br>
+    <table class="table table-stripped">
+    <thead>
+    <tr>
+    <th>Menu Name</th>
+    <th>Price</th>
+    <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let menu of menus">
+    <td>{{menu.menuName}}</td>
+    <td> {{menu.price}} </td>
+    <td>
+    <button class="btn btn-info" (click)="updateMenu(menu.id)" >Update</button>
+    <button class="btn btn-danger" (click)="deleteMenu(menu.id)">Delete</button>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+   </div>

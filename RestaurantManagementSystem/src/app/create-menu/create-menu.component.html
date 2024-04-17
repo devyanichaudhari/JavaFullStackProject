@@ -1,0 +1,15 @@
+<app-adminside></app-adminside>
+<div class="container">
+    <h2 class="text-center">Add Menu</h2>
+    <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+    <label for="menuName"> Menu Name</label>
+    <input type="text" class="form-control" id="menuName" name="menuName" [(ngModel)]="user.menuName">
+    </div>
+    <div class="form-group">
+    <label for="price">Price</label>
+    <input type="text" class="form-control" id="price" [(ngModel)]="user.price" name="price">
+    </div>
+    <button class="btn btn-success mt-2" type="submit">Submit</button>
+    </form>
+   </div>

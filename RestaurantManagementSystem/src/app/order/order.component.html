@@ -1,0 +1,31 @@
+<app-adminnav></app-adminnav>
+<app-adminside></app-adminside>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+<div class="container">
+    <h2 class="text-center">Order List</h2>
+    <button (click)="add()" class="btn btn-dark" id="add">Add Order</button>
+    <br><br>
+    <table class="table table-stripped">
+    <thead>
+    <tr>
+    <th>Menu Name</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>Total</th>
+    <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let order of orders">
+    <td> {{order.name}}</td>
+    <td> {{order.price}} </td>
+    <td> {{order.quantity}}</td>
+    <td> {{order.total}}</td>
+    <td>
+    <button class="btn btn-info" (click)="updateOrder(order.id)">Update</button>
+    <button class="btn btn-danger" (click)="deleteOrder(order.id)">Delete</button>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+   </div>

@@ -1,0 +1,29 @@
+<app-adminnav></app-adminnav>
+<app-adminside></app-adminside>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+<div class="container">
+    <h2 class="text-center">Employee List</h2>
+    <button class="btn btn-dark" id="add" (click)="addUser()">Add Employee</button>
+    <br><br>
+    <table class="table table-stripped">
+    <thead>
+    <tr>
+    <th> Name</th>
+    <th> Designation</th>
+    <th> Contact</th>
+    <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td> {{user.ename}}</td>
+            <td> {{user.edesignation}} </td>
+            <td>{{user.econtact}} </td>
+            <td>
+            <button class="btn btn-info" (click)="updateUser(user.eid)">Update</button>
+            <button class="btn btn-danger" (click)="deleteUser(user.eid)">Delete</button>
+            </td>
+            </tr>
+    </tbody>
+    </table>
+   </div>

@@ -1,0 +1,25 @@
+<app-adminside></app-adminside>
+<div class="container">
+    <h2 class="text-center">Update Order</h2>
+    <form (ngSubmit)="onSubmit()">
+        <div>
+            <label for="menuName"> Menu Name</label>
+            <input type="text" class="form-control" id="menuName" name="menuName" [(ngModel)]="order.name">
+            </div>
+            <div class="form-group">
+            <label for="price">Price</label>
+            <input type="text" class="form-control" id="price" [(ngModel)]="order.price" name="price">
+            </div>
+    <div>
+    <label for="quantity"> Quantity</label>
+    <input type="text" class="form-control" id="quantity" name="quantity" [(ngModel)]="order.quantity">
+    </div>
+    <div class="form-group">
+    <label for="total">Total</label>
+    <input type="text" class="form-control" id="total" [(ngModel)]="order.total" name="total">
+    </div>
+    <button class="btn btn-success mt-2" type="submit">Submit</button>
+    </form>
+</div>
+   
+
